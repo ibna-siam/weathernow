@@ -1,4 +1,4 @@
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import { Provider, useSelector } from "react-redux";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { store, RootState } from "./store";
@@ -46,9 +46,9 @@ export default function App() {
   return (
     <Provider store={store}>
       <QueryClientProvider client={queryClient}>
-        <BrowserRouter>
+        <HashRouter>
           <AppContent />
-        </BrowserRouter>
+        </HashRouter>
       </QueryClientProvider>
     </Provider>
   );
